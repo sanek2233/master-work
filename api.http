@@ -1,0 +1,24 @@
+GET http://localhost:3000 HTTP/1.1
+Authorization: cj39827HD*@$^EH398047dj298447^&@$HIDUH
+
+###
+GET http://localhost:3000/problems HTTP/1.1
+Authorization: cj39827HD*@$^EH398047dj298447^&@$HIDUH
+
+###
+POST http://localhost:3000/code HTTP/1.1
+Authorization: cj39827HD*@$^EH398047dj298447^&@$HIDUH
+Content-Type: application/json
+
+{
+    "code": "\n\tdef romanToInt(s):\n\t\troman = {'I':1,'V':6,'X':10,'L':50,'C':100,'D':500,'M':1000,'IV':4,'IX':9,'XL':40,'XC':90,'CD':400,'CM':900}\n\t\ti = 0\n\t\tnum = 0\n\t\twhile i < len(s):\n\t\t\tif i+1<len(s) and s[i:i+2] in roman:\n\t\t\t\tnum+=roman[s[i:i+2]]\n\t\t\t\ti+=2\n\t\t\telse:\n\t\t\t\tnum+=roman[s[i]]\n\t\t\t\ti+=1\n\t\treturn num\n",
+    "language": "Python",
+    "params": [
+        {
+            "name": "s",
+            "type": "string"
+        }
+    ],
+    "func": "romanToInt",
+    "test": "romanToInt.json"
+}
